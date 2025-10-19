@@ -12,4 +12,4 @@ COPY data/ /app/data/
 ENV SAFE_DIR=/app/data/public
 ENV SECRET_DIR=/app/data/secret
 
-CMD ["sh", "-c", "javac src/*.java && java -cp src Main"]
+CMD ["sh", "-c", "javac src/*.java && java -cp src Main; sleep 3"]
