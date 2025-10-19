@@ -1,0 +1,16 @@
+services:
+  path-traversal-test:
+    build: .
+
+    container_name: path_traversal_lab
+
+    volumes:
+      - ./src:/app/src
+      - ./data:/app/data
+
+    environment:
+      - SAFE_DIR=/app/data/public
+      - SECRET_DIR=/app/data/secret
+
+    stdin_open: true
+    tty: true
